@@ -51,27 +51,63 @@ int main(){
 
     // PP:-Write a program that asks the user to input a year and prints whether it is a leap year or not. 
         
-        int inputYear, inputYear1;
-        scanf("%d%d", &inputYear , &inputYear1);
+        // int inputYear, inputYear1;
+        // scanf("%d%d", &inputYear , &inputYear1);
 
-        if(inputYear % 4 == 0 || inputYear % 400 == 0  && inputYear % 100 != 0){
-            printf("%d This year is a Leap Year\n", inputYear);
-        }
-        else{
-            printf("%d This year is not Leap Year\n", inputYear);
-        }
+        // if(inputYear % 4 == 0 || inputYear % 400 == 0  && inputYear % 100 != 0){
+        //     printf("%d This year is a Leap Year\n", inputYear);
+        // }
+        // else{
+        //     printf("%d This year is not Leap Year\n", inputYear);
+        // }
     // PP:- Another Problem is Take to input years a tell how many Leap year in there 
-        int count = 0;
-        int checkInputYearLeap = inputYear;
+        // int count = 0;
+        // int checkInputYearLeap = inputYear;
 
-        for (int i = 0; i < inputYear1-inputYear; i++)
-            {
-                if(checkInputYearLeap % 4 == 0 || checkInputYearLeap % 400 == 0  && checkInputYearLeap % 100 != 0){
-                count = count + 1;
-                }
-                checkInputYearLeap = checkInputYearLeap + 1;
-            }
-            printf("The Leap year between %d year to %d year %d times ", inputYear, inputYear1,count);
+        // for (int i = 0; i < inputYear1-inputYear; i++)
+        //     {
+        //         if(checkInputYearLeap % 4 == 0 || checkInputYearLeap % 400 == 0  && checkInputYearLeap % 100 != 0){
+        //         count = count + 1;
+        //         }
+        //         checkInputYearLeap = checkInputYearLeap + 1;
+        //     }
+        //     printf("The Leap year between %d year to %d year %d times ", inputYear, inputYear1,count);
 
+    // PP:- Write a program that asks the user to input a letter and prints whether it is a vowel (a, e, i, o, u) or a consonant.
+
+    // char yourLetter;
+    // scanf("%c", &yourLetter);
+    
+    // if(yourLetter == 'a' || yourLetter == 'e' || yourLetter == 'i' || yourLetter == 'o' || yourLetter == 'u')
+    // {
+    //     printf("The letter you give %c this is a vowel", yourLetter);
+    // }
+    // else
+    // {
+    //     printf("The letter you give %c this is a consonant", yourLetter);
+    // }
+
+    // PP:- Write a program that asks the user to input their name and age, and prints a greeting that is personalized based on their age. For example, if the user is under 18, the greeting could be "Hello [name], you are still young!"
+    // int yourAge;
+    // char yourName[20];
+
+    // scanf("%d", &yourAge);
+    // fgets(yourName,20,stdin);
+
+    // if (yourAge <= 18)
+    // {
+    //     printf("Hey%syou are so young", yourName);
+    // }
+    // else if (yourAge <=30)
+    // {
+    //     printf("%s You are a pefect young man", yourName);
+    // }
+    // else if (yourAge <= 40)
+    // {
+    //     printf("%s You are looking like storng man", yourName);
+    // }
+    // else{
+    //     printf("%s Age doesn't matter keep in mind", yourName);
+    // }
     return 0;
 }
