@@ -109,5 +109,78 @@ int main(){
     // else{
     //     printf("%s Age doesn't matter keep in mind", yourName);
     // }
+     
+    //  Problems for loops and conditonals 
+
+    // PP:-Write a program to find the sum of all numbers from 1 to N, where N is a user input.
+
+    // int i, n;
+    // long long int sum = 0;
+    // scanf("%d",&n);
+    
+    // for (i = 1; i <= n; i++)
+    // {
+    //     sum += i;
+    // }
+    // printf("%d", sum);
+
+    // PP:-Write a program to find the factorial of a given number using a loop;
+
+//    int user_Inputed_Number, i,theResult;
+
+//    scanf("%d",&user_Inputed_Number);
+
+//    theResult = user_Inputed_Number;
+
+//    for (i = 1; i < user_Inputed_Number; i++)
+//    {
+//     theResult *= (user_Inputed_Number - i);
+//    }
+//     printf("%d",theResult);
+
+    // PP:-Write a program to print all the even numbers from 1 to N, where N is a user input.
+
+        // int userNumber, i;
+
+        // scanf("%d", &userNumber);
+
+        // for(i = 1; i <= userNumber; i++)
+        // {
+        //     if (i % 2 == 0)
+        //     {
+        //         printf("%d -Even\n", i);
+        //     }
+        //     else
+        //     {
+        //         printf("%d -Odd\n", i);
+        //     }
+            
+        // }
+
+        // PP:- Write a program to check if a given number is prime or not.
+
+        int num_Mod= 0, userInput, i;
+
+        scanf("%d", &userInput);
+
+        for (i = 1; i <= userInput; i++)
+        {
+            if (userInput % i == 0)
+            {
+                num_Mod++;
+            }
+        }
+
+       if (num_Mod == 2)
+        {
+            printf("%d - Is a Prime Number \n",userInput);
+        }
+      else
+        {
+            printf("%d - Is not Prime Number \n",userInput);
+        }
+            
+        
+
     return 0;
 }
