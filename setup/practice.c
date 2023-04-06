@@ -1,4 +1,5 @@
 #include <stdio.h>
+#define MAX_LIMIT 20
 
 int main(){
     
@@ -159,27 +160,44 @@ int main(){
 
         // PP:- Write a program to check if a given number is prime or not.
 
-        int num_Mod= 0, userInput, i;
+    //     int num_Mod= 0, userInput, i;
 
-        scanf("%d", &userInput);
+    //     scanf("%d", &userInput);
 
-        for (i = 1; i <= userInput; i++)
-        {
-            if (userInput % i == 0)
-            {
-                num_Mod++;
-            }
-        }
+    //     for (i = 1; i <= userInput; i++)
+    //     {
+    //         if (userInput % i == 0)
+    //         {
+    //             num_Mod++;
+    //         }
+    //     }
 
-       if (num_Mod == 2)
-        {
-            printf("%d - Is a Prime Number \n",userInput);
-        }
-      else
-        {
-            printf("%d - Is not Prime Number \n",userInput);
-        }
+    //    if (num_Mod == 2)
+    //     {
+    //         printf("%d - Is a Prime Number \n",userInput);
+    //     }
+    //   else
+    //     {
+    //         printf("%d - Is not Prime Number \n",userInput);
+    //     }
             
+    // PP:- You have to print the character,ch, in the first line. Then print s in next line. In the last line print the sentence,sen.
+
+    char ch;
+    char s[20];
+    char sen[MAX_LIMIT];
+
+    scanf("%c", &ch);
+    scanf("%19s", &s);
+    scanf(" %[^\n]%*c",sen);
+
+
+    printf("%c\n%s\n%s", ch, s, sen);
+
+//      char str[20];
+//    scanf("%[^\n]%*c", str);
+//    printf("%s", str);
+ 
         
 
     return 0;
