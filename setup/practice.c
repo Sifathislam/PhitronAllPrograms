@@ -183,22 +183,28 @@ int main(){
             
     // PP:- You have to print the character,ch, in the first line. Then print s in next line. In the last line print the sentence,sen.
 
-    char ch;
-    char s[20];
-    char sen[MAX_LIMIT];
+    // char ch;
+    // char s[20];
+    // char sen[MAX_LIMIT];
 
-    scanf("%c", &ch);
-    scanf("%19s", &s);
-    scanf(" %[^\n]%*c",sen);
+    // scanf("%c", &ch);
+    // scanf("%19s", &s);
+    // scanf(" %[^\n]%*c",sen);
 
 
-    printf("%c\n%s\n%s", ch, s, sen);
+    // printf("%c\n%s\n%s", ch, s, sen);
 
 //      char str[20];
 //    scanf("%[^\n]%*c", str);
 //    printf("%s", str);
- 
-        
+
+
+    // PP:-Write a program that takes a list of numbers as input and finds the largest number in the list.
+
+    int array[30];
+    scanf("%d", &array);
+
+    printf("%d" ,array);
 
     return 0;
 }
