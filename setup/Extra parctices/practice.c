@@ -201,10 +201,10 @@ int main(){
 
     // PP:-Write a program that takes a list of numbers as input and finds the largest number in the list.
 
-    int array[30];
-    scanf("%d", &array);
+    // int array[30];
+    // scanf("%d", &array);
 
-    printf("%d" ,array);
+    // printf("%d" ,array);
 
     return 0;
 }
