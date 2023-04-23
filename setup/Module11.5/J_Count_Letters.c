@@ -6,9 +6,9 @@
 
 int main(){
     char inputed_String[10000001];
-    fgets(inputed_String, sizeof(inputed_String), stdin);
-    inputed_String[strcspn(inputed_String, "\n")] = '\0'; // remove the trailing newline character
-    
+    // fgets(inputed_String, sizeof(inputed_String), stdin);
+    // inputed_String[strcspn(inputed_String, "\n")] = '\0'; // remove the trailing newline character
+    scanf("%s", inputed_String);
     long long int count[26]= {0};
     int input_String_length = strlen(inputed_String);
     for (int i = 0; i < input_String_length; i++)
