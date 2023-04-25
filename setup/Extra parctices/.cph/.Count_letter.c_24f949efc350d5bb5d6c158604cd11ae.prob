@@ -1,0 +1,1 @@
+{"name":"Local: Count_letter","url":"d:\\Software Engnearing\\Phitron.io\\setup\\Extra parctices\\Count_letter.c","tests":[{"id":1682244594043,"input":"aabbc","output":"a : 2\nb : 2\nc : 1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Software Engnearing\\Phitron.io\\setup\\Extra parctices\\Count_letter.c","group":"local","local":true}
