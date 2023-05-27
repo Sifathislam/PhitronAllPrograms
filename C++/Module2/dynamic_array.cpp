@@ -15,9 +15,5 @@ int main()
         cout << arry[i] << " ";
     }
     
-
-
-
-
     return 0;
 }
