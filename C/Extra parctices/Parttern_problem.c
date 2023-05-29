@@ -10,12 +10,8 @@ int main(){
      scanf("%d", &n);
     int k = n;
     int o = (n * 2) - 1;
-     for (int i = 0; i < (n * 2)-1; i++)
+     for (int i = 0; i < n; i++)
      {
-        if (i < n)
-        {
-          
-        
         
         if (i >= 1)
         {
@@ -44,41 +40,44 @@ int main(){
             }
             
         }
+        if (i < n-1)
+        {
+            printf("\n");
         }
-        if (i > n)
+        }
+
+     for (int i = n; i > 0; i--)
+     {
+        if (i >= 1)
         {
-        
-     if (i >= 1)
-        {
-                int l = n;
-            for (int m = 0; m < i; m++)
+            int l = n;
+            for (int m = 0; m< l; m++)
             {
-            printf("%d", l);
-            l--;
+                printf("%d", l);
+                l--;
             }
-            
+
         }
-        k++;
-        o = o + 2;
-         for (int j = o; j > 0 ; j--)
+        o+=2;
+        for (int j = o; j < o; j++)
         {
-            printf("%d",k);
+         k++;
+         printf("%d", k);   
         }
-        if (i >=1)
+        if (i >= 1)
         {
             int l = n - i;
-            for (int m = 0; i < i; i++)
+            for (int m = 0; m< l; m++)
             {
                 l++;
                 printf("%d", l);
             }
-            
+
         }
-        }
-     
         printf("\n");
-     }
         
-       
+     }
+     
+     
     return 0;
 }
