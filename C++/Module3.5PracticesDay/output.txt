@@ -1,1 +1,5 @@
-32767
+18 Dhoni
+10 Kholi
+18 print form kholi
+18 print form dhoni
+15736352 pirnt form kholi after delete
