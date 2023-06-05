@@ -6,13 +6,16 @@
 
 int main(){
 
-     int n;
-     scanf("%d", &n);
-    int k = n;
-    int o = (n * 2) - 1;
-     for (int i = 0; i < n; i++)
+    int n;  // Take input of n
+    scanf("%d", &n);
+    int k = n; //first half n time print 
+    int o = (n * 2) - 1; // first half print times 
+    int oo = 3; // secenod half print 
+    int kk = 2;  //secenod half prnt  
+     for (int i = 0; i < (2 * n )- 1; i++)
      {
-        
+        if (i < n)    // First Half
+        {
         if (i >= 1)
         {
                 int l = n;
@@ -40,43 +43,39 @@ int main(){
             }
             
         }
-        if (i < n-1)
-        {
+      if(i <= n-1){
             printf("\n");
-        }
-        }
-
-     for (int i = n; i > 0; i--)
-     {
-        if (i >= 1)
-        {
-            int l = n;
-            for (int m = 0; m< l; m++)
-            {
-                printf("%d", l);
-                l--;
             }
-
         }
-        o+=2;
-        for (int j = o; j < o; j++)
-        {
-         k++;
-         printf("%d", k);   
-        }
-        if (i >= 1)
-        {
-            int l = n - i;
-            for (int m = 0; m< l; m++)
-            {
-                l++;
-                printf("%d", l);
-            }
 
+
+
+
+
+        else{  // Secenod Half 
+        int  l = n;
+        for (int m = 0; m < n - kk; m++)
+        {
+            printf("%d",l);
+            l--;
+        }
+
+        for (int j = oo; j > 0 ; j--)
+        {
+            printf("%d", kk);
+        }
+        oo +=2;
+        kk++;
+         int ll = kk ;
+        for (int m = 0; m <= n - kk; m++)
+        {
+            printf("%d", ll);
+            ll++;
         }
         printf("\n");
         
-     }
+        }
+        }
      
      
     return 0;
