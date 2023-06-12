@@ -1,0 +1,11 @@
+Worst way to print the values
+Head >> 10
+A >> 20
+B >> 30
+C >> 40
+D >> 50
+Print the Head with loop >>10
+Print the A with loop >>20
+Print the B with loop >>30
+Print the C with loop >>40
+Print the D with loop >>50
