@@ -31,25 +31,39 @@ void Delete_any_pos(Node* Head,int pos){
 
 
 //  Delete at Tail 
-void Delete_Tail(Node* &Tail){
+void Delete_Tail(Node* &Tail,Node* &Head){
     // Store the delete node 
     Node* deleteNode = Tail;
     // Assing the tail to the previous 
     Tail = Tail->prev;
     // delete the tail 
     delete deleteNode;
+    // Prevent the error if node is one 
+    if (Tail == NULL)
+    {
+        Head = NULL;
+        return;
+    }
+    
     // Assign the next null 
     Tail->next = NULL;
 }
 
 // Delete Head 
-void Delete_Head(Node* &Head){
+void Delete_Head(Node* &Head , Node* &Tail){
     // Store the delted node 
     Node* deleteNode = Head;
     // Assing new Head 
     Head = Head->next;
     // Delete the node  
     delete deleteNode;
+    // Prevent the error if the node is one 
+    if (Head == NULL)
+    {
+        Tail = NULL;
+        return;
+    }
+    
     // Assing null to the prev Of Head 
     Head->prev = NULL;
 }
@@ -123,11 +137,11 @@ int main(){
         cout << "Invalid pos input "<< endl;
     }
     else if(pos == size_of_linked(Head) - 1){
-        Delete_Tail(Tail);
+        Delete_Tail(Tail,Head);
     }
     else if (pos == 0)
     {
-        Delete_Head(Head);
+        Delete_Head(Head,Tail);
     }
     
     else{
