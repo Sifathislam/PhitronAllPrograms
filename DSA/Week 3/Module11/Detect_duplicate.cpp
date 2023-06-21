@@ -16,7 +16,9 @@ public:
         while(temp->next != NULL){
             
             if(temp->val == temp->next->val){
+                ListNode* deleteNode = temp->next;
                 temp->next = temp->next->next;
+                delete deleteNode;
             }
             if(temp->next == NULL) break;
             
