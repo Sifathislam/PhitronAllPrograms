@@ -32,4 +32,14 @@ int main(){
      
 
     return 0;
+class Node {
+public:
+  int val;
+  Node *next;
+  // Create an constructor
+  Node(int val) {
+    this->val = val;
+    this->next = NULL;
+  }
+};
 }
