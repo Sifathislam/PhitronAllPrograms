@@ -6,26 +6,43 @@ using namespace std;
 
 int main()
 {
+    // Take test case input 
     int test_case; cin>>test_case;
     
     while (test_case--){
+        // Take input of string 
         string s; cin>>s;
         int n =0;
-        bool flag = false;
-        for(auto && i:s){
-            if(i == '1'){
+
+        // count numbers 
+        vector<int> numbers;
+        for(auto && val : s){
+            if(val == '1'){
                 n++;
             }
             else{
-                flag = true;
+                numbers.push_back(n);
+                n = 0;
             }
-
         }
-        if(n==0) cout << 0 << endl;
-        else if (flag == false) cout << n << endl;
-        else if (n % 2 == 0) cout << n/2 << endl;
-        else if (n % 2 != 0) cout << (n/2)+1 << endl;
+
+        numbers.push_back(n);
+        
+        // sort it decending
+        sort(numbers.begin(), numbers.end(), greater<int>());
+        
+        // make the result and print 
+        
+        int result = 0;
+        for (int i = 0; i < numbers.size(); i+=2)
+        {
+            result +=numbers[i];
+        }
+        
+        cout << result <<endl;
+
     }
+    
 
     return 0;
 }
