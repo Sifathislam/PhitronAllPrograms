@@ -15,10 +15,11 @@ void DFS_Depth_Height_Count(int u){
     {
         // Section 2 : check is the vertex Visited or not 
         if(Visited[v]) continue;
-        Depth[v] = Depth[u] + 1;
+        cout << v << " ";
+        // Depth[v] = Depth[u] + 1;
         DFS_Depth_Height_Count(v);
         // Section 3 After work of the neighbor 
-        Height[u] = max(Height[u],Height[v] + 1);
+        // Height[u] = max(Height[u],Height[v] + 1);
     }
     // Section 4 After work of the u 
     
@@ -37,25 +38,25 @@ int main(){
         }
 
 
+        for (int i = 1; i <= n; i++)
+        {
+            cout << "vertices edges" << ": " ; 
+            for (auto &&edges : graph[i])
+            {
+                cout << edges << " ";
+            }
+            cout << endl;
+        }
+        DFS_Depth_Height_Count(1);
         // for (int i = 1; i <= n; i++)
         // {
-        //     cout << "vertices edges" << ": " ; 
-        //     for (auto &&edges : graph[i])
-        //     {
-        //         cout << edges << " ";
-        //     }
-        //     cout << endl;
+        //     cout << "Depth of " << i << " " << Depth[i] << endl;
         // }
-        DFS_Depth_Height_Count(1);
-        for (int i = 1; i <= n; i++)
-        {
-            cout << "Depth of " << i << " " << Depth[i] << endl;
-        }
-        cout << "*-----------------------------------------------------*" << endl;
-        for (int i = 1; i <= n; i++)
-        {
-            cout << "Height of " << i <<" "<< Height[i] << endl;
-        }
+        // cout << "*-----------------------------------------------------*" << endl;
+        // for (int i = 1; i <= n; i++)
+        // {
+        //     cout << "Height of " << i <<" "<< Height[i] << endl;
+        // }
         
         
         
