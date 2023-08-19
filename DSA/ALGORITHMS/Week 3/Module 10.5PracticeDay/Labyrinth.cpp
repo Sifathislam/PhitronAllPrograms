@@ -1,118 +1,105 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-// Create and vector that can sotre graph and other variables createing 
-vector<string> graph;
+ 
 typedef pair<int, int> pii;
-const int N = 1e3+5;
-int visited[N][N]; 
-int level[N][N];
-pii parent[N][N];
+const int N = 1e3 + 10;
+vector<string> g;
+int visited[N][N];
+int level[N][N]; // ekhane lagbe na amader
+pii parent[N][N]; // path track kortechi
 int n, m;
-
-vector<pii> direction = {{0,-1}, {0, 1},{-1, 0}, {1, 0}};
-
-bool isValid(int i, int j){
-    return (i >= 0 && i < n && j >= 0 && j < m);
+vector<pii> direc = {{0, -1}, {0, 1}, {-1, 0}, {1, 0}}; // moves, left, right, up, down
+ 
+bool isValid(int i, int j)
+{
+    return (i >= 0 && i < n && j >= 0 && j < m); // cell ta ke access kora jabe kina kina, wall thakle false dibe
 }
-
-void BFS_SSSP(int si, int sj){
-    
-    // create queue
+ 
+void bfs(int si, int sj)
+{
     queue<pii> q;
-    q.push({si, sj});
+    q.push({si, sj}); // source er row ar column ke store korlam
     visited[si][sj] = true;
     level[si][sj] = 0;
-
+ 
     while (!q.empty())
     {
-        // store and remove
-        pii unpair = q.front();
-        int i = unpair.first;
-        int j = unpair.second;
+        pii upair = q.front();
+        int i = upair.first;
+        int j = upair.second;
         q.pop();
-
-        for (auto dir : direction)
+ 
+        for (auto d : direc) // moves, 
         {
-            int ni = i + dir.first;
-            int nj = j + dir.second;
-
-            if(isValid(ni,nj) && !visited[ni][nj] && graph[ni][nj]!='#')
-			{
-				q.push({ni,nj});
-				visited[ni][nj] = true;
-				level[ni][nj] = level[i][j]+1;
-				parent[ni][nj] = {i,j};
-			}
+            int ni = i + d.first; 
+            int nj = j + d.second;
+ 
+            if (isValid(ni, nj) && !visited[ni][nj] && g[ni][nj] != '#') // jodi wall na thake
+            {
+                q.push({ni, nj});
+                visited[ni][nj] = true;
+                level[ni][nj] = level[i][j] + 1;
+                parent[ni][nj] = {i, j}; // path track korlam
+            }
         }
-        
-
-
     }
-    
-
 }
-int main(){
-    // Take input and find the start place 
-    cin >> n >> m;
+ 
+int main()
+{
     int si, sj, di, dj;
+ 
+    cin >> n >> m;
     for (int i = 0; i < n; i++)
     {
-        string s; cin >> s;
-        for (int j = 0; j < m; j++)
+        string x;
+        cin >> x; // string input
+        for (int j = 0; j < m; j++) // column er upor loop cholteche
         {
-            if(s[j] == 'A'){
-                si = i,sj = j;
-            }
-            if(s[j] == 'B'){
-                di = i,dj = j;
-            }
+            if (x[j] == 'A') // 
+                si = i, sj = j; // source er row ar column ke track korlam
+            if (x[j] == 'B')
+                di = i, dj = j; // // destination er row ar column ke track korlam
         }
-        graph.push_back(s);
+        g.push_back(x);
     }
-    // Start the BFS 
-    BFS_SSSP(si, sj);
-
-    if(level[di][dj] != 0){
-        cout << "YES" <<endl;
+ 
+    bfs(si, sj); // source theke bfs chalacchi
+    if (level[di][dj] != 0) // destination er level jodi 0 na hoy tar mane seta source er soman na
+    {
+        cout << "YES\n";
         cout << level[di][dj] << endl;
-    }
-    else{
-        cout << "NO" << endl;
-    }
-    
-    vector<pii> path;
-    pii current = {di, dj};
-
-    while (!(current.first == si && current.second == sj))
-    {
-        path.push_back(current);
-        current = parent[current.first][current.second];
-    }
-
-    path.push_back({si,sj});
-    reverse(path.begin(), path.end());
-
-    for (int i = 1; i < path.size(); i++)
-    {
-        if(path[i-1].first == path[i].first){
-            if (path[i - 1].second == path[i].second - 1)
-                cout << "R";
-            else
-                cout << "L";
-            
+        vector<pii> path;
+        pii curr = {di, dj}; // ami source theke bfs korte korte destination obdi chole aschi
+ 
+        while (!(curr.first == si && curr.second == sj)) // destination er parent er parent e jaitei thakbo jotokkhn na obdi ami source ke pacchi
+        {
+            path.push_back(curr); // protita path ke ami store korlam
+            curr = parent[curr.first][curr.second];
         }
-        else{
-            if(path[i - 1].first == path[i].first - 1)
-                cout << "D";
+        path.push_back({si, sj}); // amra destination theke source er ag obdi aschi tai amra source er path keo push korlam print korar jonne
+        reverse(path.begin(), path.end()); // 
+ 
+        for (int i = 1; i < path.size(); i++)
+        {
+            // path[i-1] -> path[i]
+            if (path[i - 1].first == path[i].first)
+            {
+                if (path[i - 1].second == path[i].second - 1)
+                    cout << "R";
+                else
+                    cout << "L";
+            }
             else
-                cout << "U";
+            {
+                if (path[i - 1].first == path[i].first - 1)
+                    cout << "D";
+                else
+                    cout << "U";
+            }
         }
     }
-    
-    
-    
-
-    
-
+    else
+        cout << "NO\n";
     return 0;
 }
