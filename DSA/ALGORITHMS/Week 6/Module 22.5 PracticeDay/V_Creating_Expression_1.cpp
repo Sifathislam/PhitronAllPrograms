@@ -3,16 +3,16 @@ using namespace std;
 int n, x;
 bool Choice_result(long long sum,int i, int arr[]){
     // base case 
-    if(x == sum)
-        return true;
-    else
-       return false;
+    if(n == i){
+        return sum == x;
+    }
 
-    int opt1 = Choice_result(sum + arr[i], i + 1,arr);
-    int opt2 = Choice_result(sum - arr[i], i + 1,arr);
+      bool opt1 = Choice_result(sum + arr[i], i + 1,arr);
+      bool opt2 = Choice_result(sum - arr[i], i + 1,arr);
 
     return opt1 || opt2;
 }
+
 int main(){
 
       cin >> n >> x;
