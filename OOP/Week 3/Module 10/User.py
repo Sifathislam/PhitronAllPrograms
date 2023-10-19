@@ -1,72 +1,80 @@
-# IN Here we work with users
-from abc import ABC , abstractmethod
-# User class 
-class User:
-    def __init__(self, name,phone, email, address) -> None:
+""" In This page we will work with the users the are in the restaurant """
+
+from abc import ABC, abstractmethod
+
+# Section --> 1 User 
+class User(ABC):
+    def __init__(self,name, phone, email, address) -> None:
         self.name = name
         self.phone = phone
         self.email = email
-        self.adress = address
+        self.address = address
 
-# Section of Customer 
+
+# ---------> Custormer(User)
 class Customer(User):
-    def __init__(self, name,phone, email, address, money) -> None:
-        self.__order = None
+    def __init__(self, name, phone, email, address, money) -> None:
         self.wallet = money
-        super().__init__(name,phone, email, address)
-
+        self.__order = None
+        self.due_amount = 0
+        super().__init__(name, phone, email, address)
     @property
     def order(self):
         return self.__order
     
     @order.setter
-    def order(self,order):
+    def order(self, order):
         self.__order = order
     
-    def place_order(self, order):
+    def place_order(self,order):
         self.order = order
-        print(f"{self.name} placed an order {order.items}")
+        self.due_amount += order.bill
+        print(f"{self.name} Place Order of bill is  {order.bill}")
     
-    def eat_food(self,order):
-        print(f"{self.name} is eating the {order.items}")
+    def eat_food(self, order):
+        print(f"{self.name} is eating {order.items}")
     
     def pay_for_order(self, amount):
-        # TODO: give the money to the manager
+        #TODO sumit the money to the manager 
+        pass
+    def give_tips(self, tips_amont):
+        pass
+    def review(self,starts):
         pass
 
-    def give_tips(self, tips_amount):
-        pass
-
-    def write_review(self, starts):
-        pass
-
-# Section of employee 
-
+# ---------> Employee(User)
 class Employee(User):
-    def __init__(self, name,phone, email, address, salary, starting_date, department) -> None:
-        super().__init__(name,phone, email, address)
-
+    def __init__(self, name, phone, email, address,salary, starting_date,department) -> None:
         self.salary = salary
         self.starting_date = starting_date
+        self.due = salary
         self.department = department
+        super().__init__(name, phone, email, address)
+    
+    def recevie_salary(self):
+        self.due = 0
 
+# ---------> Chef(Employee)
 class Chef(Employee):
     def __init__(self, name, phone, email, address, salary, starting_date, department, cooking_item) -> None:
-        super().__init__(name, phone, email, address, salary, starting_date, department)
         self.cooking_item = cooking_item
+        super().__init__(name, phone, email, address, salary, starting_date, department)
 
-class Server(User):
-    def __init__(self, name, phone, email, address) -> None:
+# ---------> Server(Employee)
+class Server(Employee):
+    def __init__(self, name, phone, email, address, salary, starting_date, department) -> None:
         self.tips_earning = 0
-        super().__init__(name, phone, email, address)
-    def take_order(self, order):
+        super().__init__(name, phone, email, address, salary, starting_date, department)
+    
+    def take_order(self,order):
         pass
-
     def transfer_order(self, order):
         pass
-
-    def serve_food(sefl, order):
+    def serve_food(self, order):
         pass
-
-    def receive_tips(self, amount):
-        self.tips_earning += amount
+    def recevice_tips(self, amount):
+        pass
+# ---------> Manager (Employee)
+class Manager(Employee):
+    def __init__(self, name, phone, email, address, salary, starting_date, department) -> None:
+        super().__init__(name, phone, email, address, salary, starting_date, department)
