@@ -1,0 +1,77 @@
+/* Root section  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Navbar section  */
+#main_navbar{
+    background-color: #acece8;
+}
+.menu_section_container ul li a{
+    color: #2D2F30;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    font-size: 12px;
+}
+.menu_section_container ul i{
+    padding-top: 6px;
+}
+
+.nav_img img{
+    width: 180px;
+    margin-left: 100px;
+    margin-top: -10px;
+
+} 
+
+/* Home section  */
+#Home_main_container{
+    position: absolute;
+    background-color: #18736D;
+    width: 99.6vw;
+    height: 90vh;
+    z-index: -1;
+    overflow: hidden; 
+}
+
+.Image_and_text img{
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 509px;
+    height: 735px;
+    position: absolute;
+}
+.Image_and_text{
+ 
+}
+.Image_text{
+    width: 300px;
+    height: 100px;
+    background-color: #ffffff;
+    position: relative;
+    /* color: #2D2F30; */
+    margin-top: 38%;
+    margin-left:850px ;
+    z-index: 1;
+}
+.Image_text h2{
+    color: #33475B;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 600;
+}
+.Image_text p{
+    color: #87898C;
+    font-family: Plus Jakrta sans;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 35px;
+    text-align: center;
+}
+
+/* Service Section  */
+.Sevices_main_containner{
+    padding-top:-100px;
+    background-color: #5bc4bd;
+    height: 500px;
+}

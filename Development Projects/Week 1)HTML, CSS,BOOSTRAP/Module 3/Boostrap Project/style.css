@@ -1,0 +1,51 @@
+
+
+/* HEADER  */
+/* NavBar section  */
+#navbar{
+    background-color:#00ddc1;
+}
+.nav_image_name_container img{
+    width:80px;
+    height: 70px;
+}
+.nav_image_name_container h1{
+    font-size: 30px;
+    color: white;
+
+}
+.nav_menu_container{
+    color: white;
+}
+
+/* Home Section  */
+.Home_info_container{
+    margin-left: 4em;
+}
+h1{
+    color: #64CCC5;
+    font-size: 3rem;
+}
+.Home_info p{
+    color: #0b473a;
+}
+
+.Home_img{
+    width: 30% ;
+}
+.Home_img img{
+    margin-top: 20%;
+    margin-left: 35%;
+    width: 90%;
+}
+
+
+
+/* <!-- Services Section  --> */
+.card-img-top{
+    margin: auto;
+    width: 150px;
+}
+.card{
+    padding-top: 40px;
+}
