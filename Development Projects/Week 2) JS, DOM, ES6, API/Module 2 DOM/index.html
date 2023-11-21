@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom project</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <!-- In here we will do bank deposite project  -->
+    <div id="Bank_management_system_main_container">
+        <div class="Money_mangement_container">
+            <div class="deposite_container design">
+                <div class="tile"><h1>Deposite</h1></div>
+                <div class="amount"><h2 id="oldAmount">00</h2></div>
+            </div>
+            <div class="withdraw_container design">
+                <div class="tile"><h1>Withdraw</h1></div>
+                <div class="amount"><h2 id="oldAmount2">00</h2></div>
+            </div>
+            <div class="total_amount_container design">
+                <div class="tile"><h1>Total Amount</h1></div>
+                <div class="amount"><h2 id="blance">100</h2></div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="Submit_button">
+        <div class="deposite_button">
+            <label for="button">Deposite Amount:</label>
+            <input type="number" id="userInputAmount" class="deposite_button_amount_input" placeholder="Give amount of deposite">
+            <button class="btn1" onclick="deposite_to_wallet()">Deposite</button>
+
+        </div>
+        <div class="withdraw_button">
+            <label for="button">Withdraw Amount:</label>
+            <input type="number" id="user_input_withdraw" class="withdraw_button_amount_input " placeholder="Give amount of withdraw">
+            <button onclick="withdraw_from_wallet()" class="btn2">Withdraw</button>
+        </div>
+    </div>
+
+
+
+    
+
+    <script src="./script.js"></script>
+</body>
+</html>
