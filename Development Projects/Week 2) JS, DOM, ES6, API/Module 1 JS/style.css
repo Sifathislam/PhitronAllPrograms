@@ -1,0 +1,19 @@
+.fotter{
+    height: 60vh;
+    background-color: #0e071b;
+}
+.f-logo{
+    width: 50%;
+}
+.social{
+    color: white;
+}
+.list-1{
+    color: #6e6b75;
+}
+.list-2{
+    color: #6e6b75;
+    width: 200px !important;
+    align-items: center;
+    text-align: start;
+}
