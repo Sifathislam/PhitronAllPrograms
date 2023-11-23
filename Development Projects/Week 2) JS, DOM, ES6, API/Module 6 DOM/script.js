@@ -54,5 +54,5 @@ function withdraw_from_wallet(){
 
     // In here we will update the amont of the withdraw of the text 
     document.getElementById("oldAmount2").innerText = sum;
-    document.getElementById("user_input_withdraw").value=""
+    document.getElementById("user_input_withdraw").value="";
 }
