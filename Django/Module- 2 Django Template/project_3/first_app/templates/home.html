@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H1>This how you can output Value from the backend</H1>
+    <p>A Million Pieces of Art, Yet You Are the Masterpiece that completes the gallery of my heart</p>
+    
+    <p>Name: {{author}}</p>
+    <p>Age: {{age}}</p>
+
+
+   <hr>
+   <h1>
+        This how you can use the loop on the template 
+    </h1>
+
+    <h3>Course info</h3>
+    {%for i in course%}
+    <h4>{{i.Id}} {{i.Name}} {{i.Fee}}</h4>
+    {%endfor%}
+    <hr>
+    <h1>
+        This how you can use the Conditional statement  on the template 
+    </h1>
+    <h3>See The Age of condition </h3>
+   {% if age >= 20 %}
+        <h4>You can get the lincence</h4>
+   {% elif age >= 10 and age <= 19 %}
+        <h4>You can't get the lincence </h4>
+   {%else%}
+        <h4>Your are child</h4>
+    {% endif %}
+<hr>
+    <h1>
+        This how you can use the Django Template Filter on the template 
+    </h1>
+    <h1>Join Filter</h1>
+    <h2>Nomal list:</h2>
+    <h3>{{lst}}</h3>
+    <h2>After using join fillter of the django </h2>
+    <h3>{{ lst | join:" - " }}</h3>
+    
+    <h1>Date Filter</h1>
+    <h3>{{ birthDate | date:"D d M Y" }}</h3>
+
+    <h1>lentgh filter</h1>
+    <h3> {{ lst | length}}</h3>
+
+</body>
+</html>
