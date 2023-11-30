@@ -20,6 +20,6 @@ from .import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index_page', include('index_page.urls')),
+    path('', include('index_page.urls')),
     path('', views.home,name='home')
 ]
