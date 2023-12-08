@@ -1,0 +1,57 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% block cssOfAbout %}
+<link rel="stylesheet" href="{% static 'style_about.css' %}">
+{% endblock cssOfAbout %}
+
+{% block About_Content %}
+<div class="Main_container">
+  <div>
+    <img
+      src="{% static 'img2.png' %}"
+      alt="profile_picture"
+      srcset=""
+      class="imgeofabout"
+    />
+  </div>
+  <div class="profiel_info">
+    <h1>Sifat Islam</h1>
+    <p>
+      Greetings from the heart of Al Baik! I am Sifat, the passionate owner and
+      culinary maestro behind the flavors that define our restaurant. With a
+      zest for both programming and gastronomy, my journey has been a delightful
+      blend of technological innovation and culinary craftsmanship.
+    </p>
+  </div>
+  <div class="Restaurant_info">
+    <h2>About Restaurant</h2>
+    <p>
+      🍽️ About Al Baik: A Culinary and Digital Symphony Welcome to Al Baik,
+      where the art of programming meets the culinary stage! As the proud owner
+      and a seasoned programmer, I've crafted Al Baik to be more than just a
+      restaurant; it's a seamless blend of technology and gastronomic delight.
+      👨‍🍳 Mastering Code and Culinary Craftsmanship: With over two decades of
+      expertise, I bring a symphony of flavors to your table. From writing
+      elegant lines of code to curating mouthwatering recipes, each dish is a
+      harmonious blend of precision and creativity. 🌐 Tech-Driven Dining
+      Experience: Al Baik isn't just about incredible food; it's a celebration
+      of innovation. We leverage technology to elevate your dining experience,
+      from seamless online reservations to interactive menus that engage your
+      senses. 🍲 Handcrafted Culinary Wonders: Every dish at Al Baik is a labor
+      of love, prepared with meticulous attention to detail. Our menu reflects a
+      commitment to quality, freshness, and a touch of programming magic that
+      sets our offerings apart. 🤝 Community and Connection: Beyond the bytes
+      and bites, Al Baik is about building a community. Join us in a space where
+      technology and food converge, creating connections and memories that go
+      beyond the plate. 🎉 20 Years of Culinary Excellence: Thank you for being
+      part of our journey! As we celebrate two decades of serving excellence, Al
+      Baik invites you to experience the extraordinary flavors that define our
+      legacy. 📱 Stay Connected: Follow us on social media for exclusive
+      behind-the-scenes content, tech-infused recipes, and special promotions.
+      Let's continue this flavorful journey together!
+    </p>
+  </div>
+</div>
+
+{% endblock About_Content %}

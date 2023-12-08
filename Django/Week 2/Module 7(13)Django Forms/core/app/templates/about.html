@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block Form %}
+<h1>{{Email}}</h1>
+<h1>{{Pass}}</h1>
+<h1>
+    {%if check%}
+        YES
+    {%else%}
+        NO
+    {% endif %}
+</h1>
+{% endblock Form %}

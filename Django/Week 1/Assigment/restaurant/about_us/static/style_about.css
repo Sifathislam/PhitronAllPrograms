@@ -1,0 +1,15 @@
+.Main_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+.imgeofabout{
+    width: 350px;
+    height: 350px;
+}
+.profiel_info,
+.Restaurant_info{
+    padding: 10px 100px;
+}

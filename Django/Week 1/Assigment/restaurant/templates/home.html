@@ -1,0 +1,23 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% comment %} Add Title  {% endcomment %}
+{% block title %}HOME{% endblock title%}
+
+
+{% comment %} Home content  {% endcomment %}
+
+{% block Home_Content %}
+<div id="Home_content_container" class="">
+  <div class="Info_section">
+    <h1>Wellcome To Albaik</h1>
+    <p>
+        {{ text | truncatewords:100 }}
+    </p>
+  </div>
+  <div class="Image_seciton">
+    <img src="{% static '/img1.png' %}" alt="" srcset="">
+  </div>
+</div>
+
+{% endblock Home_Content %}

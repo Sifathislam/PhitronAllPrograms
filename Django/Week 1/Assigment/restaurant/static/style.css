@@ -1,0 +1,11 @@
+/* Home contente section  */
+#Home_content_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+}
+.Info_section{
+    text-align: center;
+    line-height: 2;
+}
