@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block cssfor %}
+<style>
+.success{
+    color: green;
+    background-color: black;
+    font-size:25px;
+    text-align:center;
+}
+</style>
+{% endblock cssfor %}
+{% block content %}
+
+{% if messages %}
+{% for m in messages %}
+    {% comment %} <div class="toast text-dark" role="alert" aria-live="assertive" aria-atomic="true" >
+        <div class="toast-header text-dark">
+        <img src="..." class="text-dark rounded me-2" alt="...">
+        <strong class="me-auto text-dark">Success</strong>
+        <button type="button" class="btn-close text-dark" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body text-dark"> {% endcomment %}
+        <small {%if m.tags %} class="{{m.tags}}" {% endif %}>{{m}}</small>
+        {% comment %} </div> {% endcomment %}
+    {% comment %} </div> {% endcomment %}
+{% endfor %}
+{% endif %}
+    
+<h1 class="text-center mt-5">SIGNUP PAGE</h1>
+{% load crispy_forms_tags %}
+<form method = "post" class="w-50 m-auto" novalidate>
+    <!-- {{ form | crispy}} -->
+{% for fm in form %}
+{% csrf_token %}
+{% csrf_token %}
+{{fm.label_tag}}
+{{fm}}
+{{fm.errors | striptags}}
+{% endfor %}
+<div class="mt-4">
+    <button class="btn btn-primary text-center d-block w-25 m-auto">Submit</button>
+</div>
+<div class="text-center my-3">
+    <small>Already Have An Account</small>
+    <a href="{% url 'login' %}"> Log in </a>
+</div>
+</form>
+{% endblock content %}
+

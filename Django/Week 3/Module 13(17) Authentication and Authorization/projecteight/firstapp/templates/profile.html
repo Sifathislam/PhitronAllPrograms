@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<h1>Wellcome the user </h1>
+<h1>Hello {{user}} </h1>
+
+<h3><a href="{% url 'pass_change' %}">Change your password</a></h3>
+<h3><a href="{% url 'pass_change2' %}">Change your password without old password</a></h3>
+<form method = "post" class="w-50 m-auto" novalidate>
+    {% csrf_token %}
+    <!-- {{ form | crispy}} -->
+    {% for fm in form %}
+    {% csrf_token %}
+    {{fm.label_tag}}
+    {{fm}}
+    {{fm.errors | striptags}}
+    {% endfor %}
+    <div class="mt-4">
+        <button class="btn btn-primary text-center d-block w-25 m-auto">Change data</button>
+    </div>
+    </form>
+{% endblock content %}

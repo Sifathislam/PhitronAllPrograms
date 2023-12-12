@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    {% comment %} <h1 class="text-center">profile page</h1>
+    <form method='post' class="w-50 m-auto">
+        {% csrf_token %}
+        <!-- {{ form | crispy }} -->
+        {% for fm in form %}
+            {{ fm.label_tag }}
+            {{ fm }}
+            {{ fm.errors }}
+        {% endfor %}
+        <a href="{% url 'passwordChange' %}" class="mt-4 btn btn-warning btn-sm d-inline-block">Change Your Password</a>
+        <button class="btn d-block my-4 btn-primary mb-5">Submit</button>
+    </form>  {% endcomment %}
+
+    <div>
+
+        <a href="{% url 'profile_edit' %}" class="btn btn-primary">
+            Edit your prfile
+        </a>
+    </div>
+
+    <div class="row px-5 mt-3">
+        {% for post in data %}
+          <div class="col-4 col-md-6 col-sm-12">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">{{post.title}}</h5>
+                <p class="card-text">
+                    {{post.content}}
+                </p>
+                <p>Author : {{post.author.first_name}} {{post.author.last_name}}</p>
+                Category: 
+                {% for cate in post.category.all %}
+                <button class="btn btn-primary m-1" disabled>{{cate.name}}</button>
+                {% endfor %}
+              <div>
+                <a href="{% url 'edit_post' post.id %}" class="btn btn-warning">Edit</a>
+                <a href="{% url 'delete_post' post.id %}" class="btn btn-danger">Delete</a>
+              </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %} 
+        </div>
+
+
+{% endblock content %}
