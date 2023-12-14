@@ -19,10 +19,10 @@ from django.urls import path,include
 from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name = 'homepage'),
+    path('', views.HomeClassView.as_view(), name = 'homepage'),
     path('album/', include('album.urls')),
     path('musician/', include('musician.urls')),
-    path('edit/<int:id>', views.edit_post, name='edit_post'),
-    path('delete/<int:id>', views.delete_post, name='delete_post'),
-    path('editMusician/<int:id>', views.edit_post_musician, name='edit_post_musicain'),
+    path('edit/<int:id>', views.EditPostView.as_view(), name='edit_post'),
+    path('delete/<int:id>', views.DeletePostView.as_view(), name='delete_post'),
+    path('editMusician/<int:id>', views.MusicianClassView.as_view(), name='edit_post_musicain'),
 ]
