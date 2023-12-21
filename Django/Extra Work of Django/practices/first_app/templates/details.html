@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block content %}
+<div>
+    <h1>This is deatils view</h1>
+    <h1>Name : {{article.name}}</h1>
+    <h2>Details : {{article.details}}</h2>
+    <h3>Time : {{article.publ_data}}</h3>
+</div>
+
+<div>
+    <h1>This list view</h1>
+    {% for data in posts %}
+    
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button
+          class="accordion-button"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseOne"
+          aria-expanded="true"
+          aria-controls="collapseOne"
+          >
+          Post item{{data.id}}
+        </button>
+    </h2>
+    <div
+    id="collapseOne"
+    class="accordion-collapse collapse show"
+    data-bs-parent="#accordionExample"
+    >
+    <div class="accordion-body">
+        <h3>{{data.name}}</h3>
+        <p>{{data.details}}</p>
+        <a href="{% url 'deleteView' data.id %}" class ="btn btn-danger">Delete content</a>
+    </div>
+</div>
+</div>
+</div>
+{% endfor %}
+</div>
+  {% comment %} <h1>All Posts</h1>
+  {% for post in posts %}
+    <h2><a href="{% url 'detailsview' post.pk %}">{{ post.name }}</a></h2>
+    <p>{{ post.details }}</p>
+    <a href="{% url 'deleteView' post.pk %}">Delete content</a>
+  {% endfor %}
+
+  <div class="pagination">
+    <span class="step-links">
+        {% if posts.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ posts.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ posts.number }} of {{ posts.paginator.num_pages }}.
+        </span>
+
+        {% if posts.has_next %}
+            <a href="?page={{ posts.next_page_number }}">next</a>
+            <a href="?page={{ posts.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+  </div> {% endcomment %}
+
+{% endblock content %}

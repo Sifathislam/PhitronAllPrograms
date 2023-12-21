@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>This the home page works</h1>
+<a href="{% url 'view' %}">1. View Class</a>
+<br>
+<a href="{% url 'old_page' %}">2. Redirect Class</a>
+<br>
+<a href="{% url 'detailsview' pk=1 %}">3. Detials View </a>
+<br>
+<a href="{% url 'addpost' %}">4. Create  View </a>
+<br>
+<a href="{% url 'listview' %}">5. List  View </a>
+
+{% endblock content %}
