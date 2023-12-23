@@ -2,22 +2,43 @@
 {% load static %}
 {%  load crispy_forms_tags %}
 
+
+{% comment %}================  Section of the Static Files  ======================{% endcomment %}
 {% block css %}
 <link rel="stylesheet" href="{% static 'style.css' %}">
+<script src="{% static 'script.js' %}"></script>
 {% endblock css %}
+
+
+{% comment %}================  Section of the Content Files  ======================{% endcomment %}
+
 {% block content %}
 <div class="m-5 take_note_container">
     <div class="m-auto ">
-        <div class="text_note"><a href="{% url 'takeNote' %}" class="text-decoration-none text-secondary">Take a note.....</a></div>
-        <form style="width:50% ; margin : auto" method="post">
-            {% csrf_token %}
-            {{form | crispy}}
-        
-        <button class="btn btn-warning">Submit</button>
-        </form>
+        <div class="text_note"> <a id="clickLink" href="{% url 'takeNote' %}" onclick="toggleForm()" class="text-decoration-none text-secondary">Click Here To Take a note.....</a></div>
     </div>    
 </div>
+
+{% comment %}================  Section of the Content Notes Files  ======================{% endcomment %}
+
+<div class="d-flex flex-wrap justify-content-start m-5 gap-5 NoteShowContainer">
+    {% for note in Notes %}
+    <a href="{% url 'EditNote' note.id %}" class="text-decoration-none text-dark">
+        <div class="NoteShow">
+            <h6><strong>{{note.title}}</strong></h6>
+            <p>{{note.body}}</p>
+            <a href="{% url 'Archive' note.id 1 %}"  class="btn btn-warning mb-2 w-100 m-auto">Archive</a>
+            <a href="{% url 'deleteNote' note.id %}" class="btn btn-danger w-100 m-auto">delete note</a>
+        </div>
+    </a>
+        {% endfor %}
+</div>
+    
 {% endblock content %}
+
+
+{% comment %}================  Section of the Home page Files  ======================{% endcomment %}
+
 {% block homepage %}
 <div
 class="d-flex flex-column algin-items-center justify-content-center w-50 m-auto text-center">

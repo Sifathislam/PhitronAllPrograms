@@ -5,6 +5,7 @@ class NoteModel(models.Model):
     title = models.CharField(max_length=100)
     body = models.TextField()
     date_time = models.DateTimeField(auto_now_add=True)
+    is_achive = models.BooleanField(default = False)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
