@@ -1,0 +1,246 @@
+/* <!-- ---------------------- Root section  -------------- --> */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+.Upper-Secton {
+  background: url(banner-bg.png) center center/cover no-repeat;
+  height: 100vh;
+  position: relative;
+  opacity: 0.88;
+}
+@import url("https://fonts.googleapis.com/css2?family=Marck+Script&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto&display=swap");
+
+/* font-family: 'Marck Script', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+/* <!-- ---------------------- NavBar section  -------------- --> */
+
+/* Underline From Center */
+.hvr-underline-from-center {
+  padding-bottom: 2px;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  background: rgb(167, 55, 167);
+  height: 2px;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-center:hover:before,
+.hvr-underline-from-center:focus:before,
+.hvr-underline-from-center:active:before {
+  left: 0;
+  right: 0;
+}
+.navbar_a {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  text-shadow: 1px 2px purple;
+}
+.logotext {
+  font-size: 44px;
+  padding-left: 18px;
+  color: white;
+  text-shadow: 3px 2px purple;
+  font-family: "Marck Script", cursive;
+  /* font-family: "Poppins", sans-serif; */
+  /* font-family: "Roboto", sans-serif; */
+}
+
+/* <!-- ---------------------- Banner section  -------------- --> */
+.carousel-text-1st {
+  font-size: 50px;
+  color: wheat;
+  text-shadow: 2px 2px purple;
+  text-align: center;
+  padding-top: 150px;
+}
+.carousel-text-2nd {
+  font-size: 50px;
+  color: wheat;
+  text-shadow: 2px 2px purple;
+  text-align: center;
+}
+.btn-of-banner {
+  text-align: center;
+  border: 1px solid #db20db;
+  position: relative;
+  left: 592px;
+  margin-top: 22px;
+  background: #000000;
+  background-image: -webkit-linear-gradient(top, #000000, #450535);
+  background-image: -moz-linear-gradient(top, #000000, #450535);
+  background-image: -ms-linear-gradient(top, #000000, #450535);
+  background-image: -o-linear-gradient(top, #000000, #450535);
+  background-image: linear-gradient(to bottom, #000000, #450535);
+  -webkit-border-radius: 9;
+  -moz-border-radius: 9;
+  border-radius: 9px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 25px;
+  padding: 10px 33px 10px 33px;
+  text-decoration: none;
+}
+
+.btn-of-banner:hover {
+  background: #fc0dfc;
+  background-image: -webkit-linear-gradient(top, #fc0dfc, #000000);
+  background-image: -moz-linear-gradient(top, #fc0dfc, #000000);
+  background-image: -ms-linear-gradient(top, #fc0dfc, #000000);
+  background-image: -o-linear-gradient(top, #fc0dfc, #000000);
+  background-image: linear-gradient(to bottom, #fc0dfc, #000000);
+  text-decoration: none;
+}
+
+/* <!-- ---------------------- Category section  -------------- --> */
+.categaytext {
+  font-size: 22px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  color: #000000d9 !important;
+}
+
+/* <!-- ---------------------- Products_Silder section  -------------- --> */
+.Products_Silder {
+  width: 1000px !important;
+  margin: auto;
+}
+.ratio > * {
+  width: 80% !important;
+  height: 80% !important;
+  margin: 30px !important;
+}
+
+/* <!-- ---------------------- All User section  -------------- --> */
+.view_All_user_Button {
+  background: #6834d9;
+  background-image: -webkit-linear-gradient(top, #6834d9, #92248f);
+  background-image: -moz-linear-gradient(top, #6834d9, #92248f);
+  background-image: -ms-linear-gradient(top, #6834d9, #92248f);
+  background-image: -o-linear-gradient(top, #6834d9, #92248f);
+  background-image: linear-gradient(to bottom, #6834d9, #92248f);
+  -webkit-border-radius: 9;
+  -moz-border-radius: 9;
+  border-radius: 9px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 26px;
+  padding: 10px 40px 10px 40px;
+  text-decoration: none;
+}
+
+.view_All_user_Button:hover {
+  background: #92248f;
+  background-image: -webkit-linear-gradient(top, #92248f, #d93434);
+  background-image: -moz-linear-gradient(top, #92248f, #d93434);
+  background-image: -ms-linear-gradient(top, #92248f, #d93434);
+  background-image: -o-linear-gradient(top, #92248f, #d93434);
+  background-image: linear-gradient(to bottom, #92248f, #d93434);
+  text-decoration: none;
+}
+
+.All-Users-containner {
+  background: #1e1ea8;
+  background: linear-gradient(to right, #1e1ea8 17%, #92248f 68%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* card section of the user  */
+.image-section-of-card img {
+  width: 110px;
+}
+.user_single-card {
+  border: 1px solid grey;
+  width: 18rem;
+  padding: 13px;
+  border-radius: 8px;
+}
+.user-info-card h2{
+    font-size: 22px;
+    padding-top: 11px;
+    text-shadow: 1px 1px #61229a;
+}
+.user-info-card h3{
+    font-size: 15px;
+}
+.user-info-card a{
+  background: #6834d9;
+  background-image: -webkit-linear-gradient(top, #6834d9, #92248f);
+  background-image: -moz-linear-gradient(top, #6834d9, #92248f);
+  background-image: -ms-linear-gradient(top, #6834d9, #92248f);
+  background-image: -o-linear-gradient(top, #6834d9, #92248f);
+  background-image: linear-gradient(to bottom, #6834d9, #92248f);
+  -webkit-border-radius: 9;
+  -moz-border-radius: 9;
+  border-radius: 9px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 10px 20px 10px 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  text-decoration: none;
+}
+.user-info-card a:hover {
+  background: #92248f;
+  background-image: -webkit-linear-gradient(top, #92248f, #d93434);
+  background-image: -moz-linear-gradient(top, #92248f, #d93434);
+  background-image: -ms-linear-gradient(top, #92248f, #d93434);
+  background-image: -o-linear-gradient(top, #92248f, #d93434);
+  background-image: linear-gradient(to bottom, #92248f, #d93434);
+  text-decoration: none;
+}
+
+
+
+/* Utility class  */
+.buttonofregistation{
+  background: #6834d9;
+  background-image: -webkit-linear-gradient(top, #6834d9, #92248f);
+  background-image: -moz-linear-gradient(top, #6834d9, #92248f);
+  background-image: -ms-linear-gradient(top, #6834d9, #92248f);
+  background-image: -o-linear-gradient(top, #6834d9, #92248f);
+  background-image: linear-gradient(to bottom, #6834d9, #92248f);
+  -webkit-border-radius: 9;
+  -moz-border-radius: 9;
+  border-radius: 9px;
+  font-family: Arial;
+  color: #ffffff !important;
+  font-size: 15px;
+  padding: 10px 20px 10px 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  text-decoration: none;
+  right: 105px;
+}
+.buttonofregistation:hover{
+  background: #92248f;
+  background-image: -webkit-linear-gradient(top, #92248f, #d93434);
+  background-image: -moz-linear-gradient(top, #92248f, #d93434);
+  background-image: -ms-linear-gradient(top, #92248f, #d93434);
+  background-image: -o-linear-gradient(top, #92248f, #d93434);
+  background-image: linear-gradient(to bottom, #92248f, #d93434);
+  text-decoration: none;
+}

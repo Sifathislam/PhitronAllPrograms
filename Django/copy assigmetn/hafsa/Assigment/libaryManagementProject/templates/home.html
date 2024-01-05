@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1 class="text-center text-secondary">WellCome To Library</h1>
+<div class="d-flex justify-content-center gap-5 flex-wrap">
+    {% for brand in Books %}
+    <ul class="text-decoration-none"> 
+        <li class="barnd_name_li list-unstyled">
+            <a href="{% url 'brand_wise' brand.slug %}" class ="text-decoration-none text-dark barnd_name_a">{{brand.name}}</a>
+        </li>
+    </ul>
+    {% endfor %}
+</div>
+{% comment %} <div class="d-flex justify-content-center flex-wrap gap-5 algin-items-center"> {% endcomment %}
+<div class="row gap-5 m-4">
+    <h3 class="text-dark"> Books Found: {{data | length }}</h3>
+    {% for val in data %}
+    <div class="card col-3" style="width: 18rem;">
+        <img src="{{val.image.url}}" class="card-img-top" alt="image of the Car">
+        <div class="card-body text-center d-flex flex-column justify-content-center">
+          <h5 class="card-title">{{val.title}}</h5>
+          <h6 class="card-title text-secondary">{{val.price}}$</h6>
+          <h6 class="card-title">{{val.description |truncatewords:10 }}</h6>
+          
+          <a href="{% url 'Views_Details' val.id%}" class="btn btn-dark">View Details</a>
+        </div>
+      </div>
+    {% endfor %}
+
+</div>
+
+
+{% endblock content %}
