@@ -11,6 +11,7 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
   </head>
   <body>
     <!-- ---------------------------- Section of Navbar ----------------- -->
@@ -44,11 +45,13 @@
     </section>
 
     <!-- ---------------------------- Section of Home Banner ----------------- -->
-    <section>
-      <div class="d-flex  align-items-center p-5">
+    <section class="Section-of-Banner">
+      <div class="d-flex  align-items-center p-5 position-relative">
         <div class="text-of-the-banner">
           <h3 class="d-inline">Hlw, Mr.</h3>
           <h2 class="d-inline">Shuvashis</h2>
+         <div class="banner-inside-info-desgin d-flex justify-content-between align-items-xl-center text-center">
+         <div class="banner-text-design">
           <h1>
             Providing Quality <br />
             Healthcare
@@ -59,14 +62,36 @@
             rhoncus, faucibus diam ac, iaculis urna. Phasellus pellentesque dui
             in suscipit eleifend.
           </p>
-        </div class="text-of-the-banner-img">
-        <div>
-          <img src="./Images/doc.png" alt="">
-        </div>
+         </div>
+        <div class="text-of-the-banner-img">
+         </div>
       </div>
     </section>
 
+    <!-- ---------------------------- Section of Services Banner ----------------- -->
+    <section class="Section-of-Services">
+      <div class="services-main-containner d-flex justify-content-center align-items-center text-center flex-wrap flex-column">
+        <div class="header-text-services">
+          <h1>Services we provide </h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit semper dalar elementum tempus hac tellus libero accumsan. </p>
+        </div>
+        <div class="section-of-slider">
+          <div class="swiffy-slider slider-item-show3 slider-item-reveal slider-nav-dark slider-nav-outside-expand Products_Silder">
+            <ul class="slider-container py-4" id="slider2">
+ 
+              
+            </ul>
+        
+            <button type="button" class="slider-nav" aria-label="Go to previous"></button>
+            <button type="button" class="slider-nav slider-nav-next" aria-label="Go to next"></button>
+        </div>
+      </div>
+    </div>
+    </section>
+
+
     <!-- Script filest  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
     <script src="./app.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
