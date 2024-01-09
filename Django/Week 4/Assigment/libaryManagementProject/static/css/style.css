@@ -58,43 +58,6 @@ body {
 }
 
 /*=================== Navber design  ==================*/
-.barnd_name_ul {
-  padding: 0;
-  list-style: none;
-  display: table;
-  text-align: center;
-}
-.barnd_name_li {
-  display: table-cell;
-  position: relative;
-  padding: 15px 0;
-}
-.barnd_name_a {
-  color: black;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 0.15em;
-
-  display: inline-block;
-  padding: 15px 20px;
-  position: relative;
-}
-.barnd_name_a:after {
-  background: none repeat scroll 0 0 transparent;
-  bottom: 0;
-  content: "";
-  display: block;
-  height: 2px;
-  left: 50%;
-  position: absolute;
-  background: black;
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  width: 0;
-}
-.barnd_name_a:hover:after {
-  width: 100%;
-  left: 0;
-}
 .btn-of-signup {
   color: #1a2d62;
   font-family: "Mulish", sans-serif;
@@ -161,13 +124,17 @@ body {
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-.hvr-bounce-to-bottom:hover{
+.hvr-bounce-to-bottom:hover {
   border: 1px solid #1a2d62;
 }
-.hvr-bounce-to-bottom:hover, .hvr-bounce-to-bottom:focus, .hvr-bounce-to-bottom:active {
+.hvr-bounce-to-bottom:hover,
+.hvr-bounce-to-bottom:focus,
+.hvr-bounce-to-bottom:active {
   color: white;
 }
-.hvr-bounce-to-bottom:hover:before, .hvr-bounce-to-bottom:focus:before, .hvr-bounce-to-bottom:active:before {
+.hvr-bounce-to-bottom:hover:before,
+.hvr-bounce-to-bottom:focus:before,
+.hvr-bounce-to-bottom:active:before {
   -webkit-transform: scaleY(1);
   transform: scaleY(1);
   -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
@@ -371,6 +338,49 @@ body {
   font-size: 16px;
   font-family: "Mulish", sans-serif;
 }
+/* ==================== Card Section ====================  */
+.Card_section_text {
+  padding: 58px;
+  margin-bottom: 30px;
+  position: relative;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  box-shadow: 0px 0px 150px 0px rgba(78, 67, 250, 0.1);
+  border-right: 1px solid #ededed;
+}
+.Card_section_text h3 {
+  font-size: 25px;
+  position: relative;
+  left: 24px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  overflow: hidden;
+  letter-spacing: 0px;
+  margin: 0px;
+  font-family: "Mulish", sans-serif;
+  color: #1a2d62;
+}
+.Card_section_text p {
+  font-weight: 400;
+  font-size: 17px;
+  padding: 24px;
+  font-family: "Mulish", sans-serif;
+  color: #888;
+  line-height: 26px;
+}
+.Card_section_text a {
+  padding: 16px;
+  text-decoration: none;
+  position: relative;
+  font-size: 18px;
+  color: #1a2d62;
+  font-weight: 700;
+  left: 5px;
+}
+.arrowsignpng {
+  width: 23px;
+  padding-bottom: 4px;
+}
 
 /*========================= Category Design ====================================  */
 .barnd_name_ul {
@@ -378,13 +388,14 @@ body {
   list-style: none;
   display: table;
   text-align: center;
+  margin: 0px !important;
 }
 .barnd_name_li {
   display: table-cell;
   position: relative;
   padding: 15px 0;
 }
-.barnd_name_a {
+.barnd_name {
   color: black;
   text-transform: uppercase;
   text-decoration: none;
@@ -394,7 +405,10 @@ body {
   padding: 15px 20px;
   position: relative;
 }
-.barnd_name_a:after {
+.barnd_name:hover {
+  color: #1a2d62 !important;
+}
+.barnd_name:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
@@ -402,28 +416,66 @@ body {
   height: 2px;
   left: 50%;
   position: absolute;
-  background: black;
+  /* background: #1a2d62 !important; */
+  background: #2dc77d !important;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
-.barnd_name_a:hover:after {
+.barnd_name:hover:after {
   width: 100%;
   left: 0;
 }
-@media screen and (max-height: 300px) {
-  .barnd_name_ul {
-    margin-top: 40px;
-  }
-}
-
 
 /* ==================== Books Section ====================  */
-.Products_Silder{
-  width: 1000px !important;
+.Products_Silder {
+  width: 1350px !important;
   margin: auto;
 }
-.ratio>*{
-  width: 80% !important;
-  height: 80% !important;
-  margin: 30px !important;
+.ratio > * {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100% !important;
+  height: 100% !important;
+  /* margin: 30px !important; */
+}
+.rounded-card {
+  border-radius: 15px !important;
+}
+.slider-container>* {
+  width: 85%;
+}
+.card-text-books{
+  font-weight: 400 !important;
+  font-size: 17px !important;
+  padding: 5px !important;
+  font-family: "Mulish", sans-serif !important;
+  color: #888 !important;
+  line-height: 26px !important;
+}
+.flex-grow-1{
+  font-size: 20px;
+  color: #132249 !important;
+
+}
+.px-md-2{
+  color: #2dc77d !important;
+}
+
+.book-card-button {
+  color: #1a2d62;
+  font-family: "Mulish", sans-serif;
+  text-decoration: none;
+  border: 1px solid #ededed;
+  padding: 10px 30px;
+  font-weight: 700;
+  display: inline-block;
+  border-radius: 15px;
+  font-size: 16px;
+  transition: 0.3s;
+  text-align: center;
+}
+.book-card-button:hover {
+  color: #fff;
+  border: 1px solid #2eca7f;
+  background: #2eca7f;
 }
